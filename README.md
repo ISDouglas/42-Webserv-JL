@@ -8,7 +8,7 @@
 
 **Webserv** is a project from **42 School** that aims to implement a fully functional **HTTP server** in **C++98**, capable of serving static and dynamic web content.
 
-The goal is to reproduce the behavior of a real web server like **nginx** or **Apache**, while deepening understanding of **sockets**, **HTTP protocols**, **CGI**, and **I/O multiplexing** (using `poll()` or `epoll()`).
+The goal is to reproduce the behavior of a real web server like **nginx** or **Apache**, while deepening understanding of **sockets**, **HTTP protocols**, **CGI**, and **I/O multiplexing** (using `poll()`).
 
 ---
 
@@ -47,7 +47,7 @@ The goal is to reproduce the behavior of a real web server like **nginx** or **A
 ```bash
 make
 
-### ▶️ Run the Server
+## ▶️ Run the Server
 ./webserv conf/beast.conf
 Then open your browser and go to :
 http://localhost:8090/
@@ -72,10 +72,10 @@ server {
 }
 
 
-###🌍 Test Webpage Preview
+##🌍 Test Webpage Preview
 
 
-###🧪 Testing
+##🧪 Testing
 
 You can test your webserver with:
 
