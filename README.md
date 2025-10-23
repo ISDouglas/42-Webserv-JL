@@ -48,8 +48,10 @@ The goal is to reproduce the behavior of a real web server like **nginx** or **A
 make
 
 ## ▶️ Run the Server
+```bash
 ./webserv conf/beast.conf
-Then open your browser and go to :
+
+###Then open your browser and go to :
 http://localhost:8090/
 
 ### 🧾 Example Configuration
@@ -78,7 +80,7 @@ server {
 ##🧪 Testing
 
 You can test your webserver with:
-
+```bash
 curl -v http://localhost:8080/
 curl -X POST -d "data=test" http://localhost:8080/cgi-bin/form.py
 ab -n 1000 -c 50 http://localhost:8080/
