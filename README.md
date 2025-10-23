@@ -46,15 +46,17 @@ The goal is to reproduce the behavior of a real web server like **nginx** or **A
 ### 🧱 Compilation
 ```bash
 make
-
+```
 ## ▶️ Run the Server
 ```bash
 ./webserv conf/beast.conf
-
+```
 ###Then open your browser and go to :
+```bash
 http://localhost:8090/
-
+```
 ### 🧾 Example Configuration
+```bash $cat config.conf
 server {
     listen 8080;
     server_name localhost;
@@ -72,7 +74,7 @@ server {
 
     error_page 404 /errors/404.html;
 }
-
+```
 
 ##![🌍Test Website Preview](site/resources/images/webserv.png)
 
@@ -84,3 +86,4 @@ You can test your webserver with:
 curl -v http://localhost:8080/
 curl -X POST -d "data=test" http://localhost:8080/cgi-bin/form.py
 ab -n 1000 -c 50 http://localhost:8080/
+```
