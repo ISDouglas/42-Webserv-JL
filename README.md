@@ -37,7 +37,7 @@ The goal is to reproduce the behavior of a real web server like **nginx** or **A
 | **I/O Multiplexing** | `poll()` |
 | **Configuration** | Custom parser for `.conf` files |
 | **CGI Handling** | Environment setup + process fork/exec |
-| **Testing** | Using web browsers, `curl`, and `ab` (Apache Benchmark) |
+| **Testing** | Using web browsers, `curl`, and `siege` (HTTP Load Tester by Jeffrey Fulmer etc.) |
 
 ---
 
@@ -58,18 +58,18 @@ http://localhost:8090/
 ### 🧾 Example Configuration
 ```bash $cat config.conf
 server {
-    listen 8080;
+    listen 8090;
     server_name localhost;
 
-    root ./www;
+    root ./site;
 
     location / {
         index index.html;
         autoindex on;
     }
 
-    location /cgi-bin/ {
-        cgi_pass ./cgi-bin/;
+    location /cgi/ {
+        root ./site/resources/cgi/;
     }
 
     error_page 404 /errors/404.html;
@@ -83,7 +83,7 @@ server {
 
 You can test your webserver with:
 ```bash
-curl -v http://localhost:8080/
-curl -X POST -d "data=test" http://localhost:8080/cgi-bin/form.py
-ab -n 1000 -c 50 http://localhost:8080/
+curl -v http://localhost:8090/
+curl -X POST -d "name=Alice&email=alice@example.com" http://localhost:8090/cgi/hub.py/others/process.py
+siege -c 50 -r 20 http://localhost:8090/
 ```
