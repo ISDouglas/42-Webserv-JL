@@ -1,6 +1,6 @@
 # 🌐 Webserv
 
-### 42 Project - HTTP Server in C++
+### 42 Project - Non blocking IO HTTP Server in C++
 
 ---
 
@@ -8,7 +8,7 @@
 
 **Webserv** is a project from **42 School** that aims to implement a fully functional **HTTP server** in **C++98**, capable of serving static and dynamic web content.
 
-The goal is to reproduce the behavior of a real web server like **nginx** or **Apache**, while deepening understanding of **sockets**, **HTTP protocols**, **CGI**, and **I/O multiplexing** (using `poll()`).
+The goal is to reproduce the behavior of a real web server like **nginx** or **Apache**, while deepening understanding of **sockets**, **HTTP protocols**, **CGI**, **I/O non-blocking** (using `fcntl() + O_NONBLOCK`), and **I/O multiplexing** (using `poll()`).
 
 ---
 
@@ -35,6 +35,7 @@ The goal is to reproduce the behavior of a real web server like **nginx** or **A
 | **Language** | C++98 |
 | **Networking** | POSIX sockets |
 | **I/O Multiplexing** | `poll()` |
+| **I/O Non-blocking** | `fcntl() + O_NONBLOCK` |
 | **Configuration** | Custom parser for `.conf` files |
 | **CGI Handling** | Environment setup + process fork/exec |
 | **Testing** | Using web browsers, `curl`, and `siege` (HTTP Load Tester by Jeffrey Fulmer etc.) |
