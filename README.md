@@ -4,7 +4,11 @@
 ##🌍Test Website Preview
 ##![🌍Test Website Preview](site/resources/images/webserv.png)
 ---
+<h4 align="right">
+	
+  🧑🏻‍💻👩🏻‍💻 Made by [@ISDouglas](https://github.com/ISDouglas) and [@yJuste](https://github.com/yJuste)  
 
+</h4>
 ## 🧠 Overview
 
 **Webserv** is a project from **42 School** that aims to implement a fully functional **HTTP server** in **C++98**, capable of serving static and dynamic web content.
