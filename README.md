@@ -1,7 +1,8 @@
 # 🌐 Webserv
 
 ### 42 Project - Non blocking IO HTTP Server in C++
-
+##🌍Test Website Preview
+##![🌍Test Website Preview](site/resources/images/webserv.png)
 ---
 
 ## 🧠 Overview
@@ -76,9 +77,6 @@ server {
     error_page 404 /errors/404.html;
 }
 ```
-
-##🌍Test Website Preview
-##![🌍Test Website Preview](site/resources/images/webserv.png)
 
 ##🧪 Testing
 
